@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Kidzy';
+    src: url('KidzyRegular.eot');
+    src: url('KidzyRegular.eot?#iefix') format('embedded-opentype'),
+        url('KidzyRegular.woff2') format('woff2'),
+        url('KidzyRegular.woff') format('woff'),
+        url('KidzyRegular.ttf') format('truetype'),
+        url('KidzyRegular.svg#KidzyRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

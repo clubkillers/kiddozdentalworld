@@ -1,0 +1,6 @@
+# Excluded: PHP mailer scripts contain hardcoded SMTP credentials,
+# and GitHub Pages only serves static files (can't run PHP anyway).
+*.php
+PHPMailer-master/
+
+.DS_Store

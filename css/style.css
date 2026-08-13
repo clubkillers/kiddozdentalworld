@@ -1,0 +1,4057 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ @font-face {
+ font-family: 'Kidzy';
+ src: url('../fonts/KidzyRegular.eot');
+ src: url('../fonts/KidzyRegular.eot?#iefix') format('embedded-opentype'), url('../fonts/KidzyRegular.woff2') format('woff2'), url('../fonts/KidzyRegular.woff') format('woff'), url('../fonts/KidzyRegular.ttf') format('truetype'), url('../fonts/KidzyRegular.svg#KidzyRegular') format('svg');
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap;
+}
+/* ----------------------------------------------------- Header Start ----------------------------------------------------- */
+
+
+header {
+	padding: 10px 0 5px;
+	border-bottom: 5px solid #f8a650;
+	float: left;
+	width: 100%;
+	position: relative;
+	background: #fff;
+	z-index: 9;
+}
+.header-btn {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.header-btn a.btn-big {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-image: url(../images/btn-shape-big.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: #000;
+	padding: 10px 36px 10px 26px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	overflow: hidden;
+	z-index: 1;
+}
+.mobile_btn_header.header-btn {
+	display: none;
+}
+
+/* Bubble layer */
+.header-btn a.btn-big::before {
+ content: "";
+ position: absolute;
+ inset: 0;
+ background-color: #268eff;
+
+    /* SAME SHAPE MASK */
+    -webkit-mask-image: url(../images/btn-shape-big.png);
+ -webkit-mask-size: contain;
+ -webkit-mask-repeat: no-repeat;
+ -webkit-mask-position: center;
+ mask-image: url(../images/btn-shape-big.png);
+ mask-size: contain;
+ mask-repeat: no-repeat;
+ mask-position: center;
+
+    /* bubble start */
+    clip-path: circle(0% at 50% 50%);
+ transition: clip-path 0.7s ease-in-out;
+ z-index: -1;
+}
+
+/* Hover expand */
+.header-btn a.btn-big:hover::before {
+ clip-path: circle(150% at 50% 50%);
+}
+/* Optional text color change */
+.header-btn a.btn-big:hover {
+	color: #fff;
+}
+.header-btn a.btn-small {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-image: url(../images/btn-shape-small.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: #000;
+	padding: 10px 36px 10px 30px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+/* Bubble layer */
+.header-btn a.btn-small::before {
+ content: "";
+ position: absolute;
+ inset: 0;
+ background-color: #268eff;
+
+    /* SAME SHAPE MASK */
+    -webkit-mask-image: url(../images/btn-shape-small.png);
+ -webkit-mask-size: contain;
+ -webkit-mask-repeat: no-repeat;
+ -webkit-mask-position: center;
+ mask-image: url(../images/btn-shape-small.png);
+ mask-size: contain;
+ mask-repeat: no-repeat;
+ mask-position: center;
+
+    /* bubble start */
+    clip-path: circle(0% at 50% 50%);
+ transition: clip-path 0.7s ease-in-out;
+ z-index: -1;
+}
+
+/* Hover expand */
+.header-btn a.btn-small:hover::before {
+ clip-path: circle(150% at 50% 50%);
+}
+/* Optional text color change */
+.header-btn a.btn-small:hover {
+	color: #fff;
+}
+.header-main {
+	float: left;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.header-btn-nav {
+	display: flex;
+	align-items: end;
+	flex-direction: column;
+	gap: 20px;
+	padding: 25px 0 0 0;
+}
+nav#cssmenu ul {
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.logo {
+	padding: 0;
+	float: left;
+	position: relative;
+}
+.logo img {
+	max-width: 160px;
+}
+.logo a {
+	color: #6DDB07;
+}
+#cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a, #cssmenu #head-mobile {
+	list-style: none;
+}
+#cssmenu:after, #cssmenu>ul:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0
+}
+#cssmenu #head-mobile {
+	display: none
+}
+#cssmenu>ul>li {
+	float: left;
+	position: relative;
+}
+#cssmenu>ul>li>a {
+	padding: 10px 10px;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: -0.1px;
+}
+#cssmenu>ul>li>a:hover {
+	color: #f8a650;
+}
+/* #cssmenu>ul>li:hover>a,
+#cssmenu ul li.active a {
+    color: #fff;
+} */
+
+/* #cssmenu>ul>li:hover,
+#cssmenu ul li.active:hover,
+#cssmenu ul li.active,
+#cssmenu ul li.has-sub.active:hover {
+    background: #000 !important;
+    -webkit-transition: background .3s ease;
+    -ms-transition: background .3s ease;
+    transition: background .3s ease;
+} */
+#cssmenu>ul>li.has-sub>a {
+	position: relative;
+}
+#cssmenu>ul>li.has-sub>a i {
+	transition: transform 0.5s ease;
+}
+#cssmenu>ul>li.has-sub:hover>a i {
+	transform: rotate(180deg);
+}
+#cssmenu>ul>li.has-sub>a i {
+	font-size: 11px;
+	margin: 0 0 0 -2px;
+}
+#cssmenu ul ul {
+	position: absolute;
+	left: -9999px;
+	margin-top: 0;
+	background: #fff;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	width: 300px;
+	top: 33px;
+}
+.smile_gl {
+	width: 180px !important;
+}
+#cssmenu ul ul:before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 19%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-left: 10px solid #f8a65000;
+	border-right: 10px solid #f8a65000;
+	border-bottom: 10px solid #f8a650;
+}
+#cssmenu ul ul li {
+	height: 0;
+}
+#cssmenu li:hover>ul {
+	left: auto
+}
+img.header_shape {
+	position: absolute;
+	width: 90px;
+	top: -24px;
+	left: 21%;
+	transform: translate(170%, 0%);
+}
+#cssmenu li:hover>ul>li {
+	height: auto
+}
+#cssmenu ul ul ul {
+	margin-left: 100%;
+	top: 0
+}
+#cssmenu ul ul li a {
+	padding: 15px 15px;
+	font-size: 13px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: -0.1px;
+	float: left;
+	width: 100%;
+}
+#cssmenu ul ul li:last-child>a, #cssmenu ul ul li.last-item>a {
+	border-bottom: 0
+}
+#cssmenu ul ul li a:hover {
+	background: #f8a650 !important;
+	color: #fff;
+}
+#cssmenu ul ul li.has-sub>a:after {
+	position: absolute;
+	top: 16px;
+	right: 11px;
+	width: 8px;
+	height: 2px;
+	display: block;
+	background: #ddd;
+	content: ''
+}
+#cssmenu ul ul li.has-sub>a:before {
+	position: absolute;
+	top: 13px;
+	right: 14px;
+	display: block;
+	width: 2px;
+	height: 8px;
+	background: #ddd;
+	content: '';
+ -webkit-transition: all .25s ease;
+ -ms-transition: all .25s ease;
+ transition: all .25s ease
+}
+#cssmenu ul ul>li.has-sub:hover>a:before {
+	top: 17px;
+	height: 0
+}
+#cssmenu ul ul li.has-sub:hover, #cssmenu ul li.has-sub ul li.has-sub ul li:hover {
+	background: #000;
+}
+#cssmenu ul ul ul li.active a {
+	border-left: 1px solid #000
+}
+#cssmenu>ul>li.has-sub>ul>li.active>a, #cssmenu>ul ul>li.has-sub>ul>li.active>a {
+	border-top: 1px solid #000
+}
+ @media screen and (max-width:991px) {
+ .logo2 {
+ display: none
+}
+ nav {
+ width: 100%;
+}
+ #cssmenu {
+ width: 100%
+}
+ #cssmenu ul {
+ width: 100%;
+ display: none
+}
+ #cssmenu ul li {
+ width: 100%;
+ border-bottom: 1px solid #ffffff;
+ float: left;
+}
+ #cssmenu ul ul:before {
+ transform: translateX(-270%);
+}
+ #cssmenu ul li:hover {
+ background: transparent !important;
+}
+ #cssmenu>ul>li.has-sub>a i {
+ display: none;
+}
+ #cssmenu ul ul li, #cssmenu li:hover>ul>li {
+ height: auto
+}
+ #cssmenu ul li a, #cssmenu ul ul li a {
+ width: 100%;
+ border-bottom: 0;
+ float: left;
+}
+ #cssmenu ul ul li a {
+ padding-left: 25px
+}
+ #cssmenu ul ul li {
+ background: #f8a650 !important;
+}
+ #cssmenu ul ul li:hover {
+ background: #fff !important
+}
+ #cssmenu ul ul ul li a {
+ padding-left: 35px
+}
+ #cssmenu ul ul li a {
+ color: #fff;
+ background: none;
+}
+ #cssmenu ul ul li:hover>a, #cssmenu ul ul li.active>a {
+ color: #fff
+}
+ #cssmenu ul ul, #cssmenu ul ul ul {
+ position: relative;
+ left: 0;
+ width: 100%;
+ margin: 0;
+ text-align: left
+}
+ #cssmenu>ul>li.has-sub>a:after, #cssmenu>ul>li.has-sub>a:before, #cssmenu ul ul>li.has-sub>a:after, #cssmenu ul ul>li.has-sub>a:before {
+ display: none
+}
+ #cssmenu #head-mobile {
+ display: block;
+ padding: 0;
+ color: #ddd;
+ font-size: 12px;
+ font-weight: 700;
+}
+ #cssmenu .button {
+ width: 55px;
+ height: 46px;
+ position: absolute;
+ right: 0;
+ top: 15px;
+ cursor: pointer;
+ z-index: 12399994;
+}
+ .button:after {
+ position: absolute;
+ top: 22px;
+ right: 20px;
+ display: block;
+ height: 8px;
+ width: 20px;
+ border-top: 2px solid #000000;
+ border-bottom: 2px solid #000000;
+ content: '';
+}
+ .button:before {
+ -webkit-transition: all .3s ease;
+ -ms-transition: all .3s ease;
+ transition: all .3s ease;
+ position: absolute;
+ top: 16px;
+ right: 20px;
+ display: block;
+ height: 2px;
+ width: 20px;
+ background: #000;
+ content: ''
+}
+ .button.menu-opened:after {
+ -webkit-transition: all .3s ease;
+ -ms-transition: all .3s ease;
+ transition: all .3s ease;
+ top: 23px;
+ border: 0;
+ height: 2px;
+ width: 19px;
+ background: #000;
+ -webkit-transform: rotate(45deg);
+ -moz-transform: rotate(45deg);
+ -ms-transform: rotate(45deg);
+ -o-transform: rotate(45deg);
+ transform: rotate(45deg)
+}
+ .button.menu-opened:before {
+ top: 23px;
+ background: #000;
+ width: 19px;
+ -webkit-transform: rotate(-45deg);
+ -moz-transform: rotate(-45deg);
+ -ms-transform: rotate(-45deg);
+ -o-transform: rotate(-45deg);
+ transform: rotate(-45deg);
+}
+ #cssmenu .submenu-button {
+ position: absolute;
+ z-index: 99;
+ right: 0;
+ top: 0;
+ display: block;
+ border-left: 1px solid #444;
+ height: 46px;
+ width: 46px;
+ cursor: pointer
+}
+ #cssmenu .submenu-button.submenu-opened {
+ background: #f8a650;
+}
+ #cssmenu ul ul .submenu-button {
+ height: 34px;
+ width: 34px
+}
+ #cssmenu .submenu-button:after {
+ position: absolute;
+ top: 22px;
+ right: 19px;
+ width: 8px;
+ height: 2px;
+ display: block;
+ background: #ddd;
+ content: ''
+}
+ #cssmenu ul ul .submenu-button:after {
+ top: 15px;
+ right: 13px
+}
+ #cssmenu .submenu-button.submenu-opened:after {
+ background: #fff
+}
+ #cssmenu .submenu-button:before {
+ position: absolute;
+ top: 19px;
+ right: 22px;
+ display: block;
+ width: 2px;
+ height: 8px;
+ background: #ddd;
+ content: ''
+}
+ #cssmenu ul ul .submenu-button:before {
+ top: 12px;
+ right: 16px
+}
+ #cssmenu .submenu-button.submenu-opened:before {
+ display: none
+}
+ #cssmenu ul ul ul li.active a {
+ border-left: none
+}
+ #cssmenu>ul>li.has-sub>ul>li.active>a, #cssmenu>ul ul>li.has-sub>ul>li.active>a {
+ border-top: none
+}
+}
+/* ----------------------------------------------------- Header Close ----------------------------------------------------- */
+
+
+
+
+/* ----------------------------------------------------- Hero Start ----------------------------------------------------- */
+
+.banner-section {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.banner-section img {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+/* ----------------------------------------------------- Hero Close ----------------------------------------------------- */
+
+
+
+
+
+/* ----------------------------------------------------- Detail Start ----------------------------------------------------- */
+
+.detail-section {
+	float: left;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	padding: 60px 0 45px;
+}
+.detail_section_conetn {
+	width: 76.9%;
+	margin: auto;
+}
+.intro_img {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+.intro_img img {
+	width: 100px;
+}
+.detail_section_conetn h2 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 35px;
+	margin: 0;
+}
+.detail_section_conetn p {
+	float: left;
+	width: 100%;
+	margin: auto;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	line-height: 21px;
+	margin: 3px 0 0 0;
+}
+.btn-wrapper {
+	float: left;
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	margin: 10px 0 0 0;
+}
+.btn-wrapper a.btn-wrapper-big {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-image: url(../images/colorful-btn.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	color: #fff;
+	padding: 15px 30px 14px 30px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+/* Bubble mask */
+.btn-wrapper a.btn-wrapper-big::before {
+ content: "";
+ position: absolute;
+ inset: 0;
+ background-color: #268eff;
+
+    /* SAME SHAPE MASK */
+    -webkit-mask-image: url(../images/colorful-btn.png);
+ -webkit-mask-size: 100% 100%;
+ -webkit-mask-repeat: no-repeat;
+ mask-image: url(../images/colorful-btn.png);
+ mask-size: 100% 100%;
+ mask-repeat: no-repeat;
+
+    /* Bubble start */
+    clip-path: circle(0% at 50% 50%);
+ transition: clip-path 0.7s ease-in-out;
+ z-index: -1;
+}
+
+/* Hover = bubble expand */
+.btn-wrapper a.btn-wrapper-big:hover::before {
+ clip-path: circle(150% at 50% 50%);
+}
+.hello_kidddiz {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 70px 0 0;
+	display: flex;
+	margin: auto;
+	justify-content: center;
+}
+.hello_kidddiz img {
+	width: 500px;
+}
+/* ----------------------------------------------------- Detail Close ----------------------------------------------------- */
+
+
+
+
+/* ----------------------------------------------------- Why Choose Start ----------------------------------------------------- */
+
+.why_choose_section {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/style-bg.png);
+	background-size: cover;
+	background-position: top left;
+	background-repeat: no-repeat;
+	padding: 209px 0 70px 0;
+}
+.why_choose_section h2 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 40px;
+	text-align: center;
+	margin: 0 0 30px 0;
+	line-height: normal;
+}
+.whychoose_grid {
+	float: left;
+	width: 100%;
+	position: relative;
+	background: #fdfdff;
+	padding: 30px;
+	border-radius: 73px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.icon-choose {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+.icon-choose img {
+	width: 100px;
+}
+.whychoose_grid h4 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 30px;
+	text-align: center;
+	margin: 15px 0 5px;
+	line-height: normal;
+}
+.whychoose_grid p {
+	float: left;
+	width: 252px;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	text-align: center;
+	margin: auto;
+}
+/* ----------------------------------------------------- Why Choose Close ----------------------------------------------------- */
+
+
+
+
+
+/* ----------------------------------------------------- Doctor Detail Start ----------------------------------------------------- */
+
+.doctor_detail_section {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 70px 0 30px;
+	background-image: url(../images/bg-22.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: -52px -2%;
+}
+.doctor_detail_contetn img {
+	width: 100%;
+	float: left;
+}
+.doctor_detail_contetn {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.doctor_detail_contetn span {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 24px;
+	margin: 0;
+}
+.doctor_detail_contetn h2 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 40px;
+	margin: 0;
+	text-transform: uppercase;
+	line-height: 36px;
+}
+.doctor_detail_contetn samp {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 30px;
+	margin: 5px 00 0 0;
+}
+.doctor_detail_contetn h5 {
+	float: left;
+	width: 100%;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	margin: 15px 0 10px 0;
+	line-height: 22px;
+}
+.doctor_detail_contetn p {
+	float: left;
+	margin: auto;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	width: 484px;
+}
+.btn-wrapper a.btn-wrapper-small {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-image: url(../images/colorful-btn2.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	color: #fff;
+	padding: 14px 20px 11px 20px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+/* Bubble layer */
+.btn-wrapper a.btn-wrapper-small::before {
+ content: "";
+ position: absolute;
+ inset: 0;
+ background-color: #268eff;
+
+    /* SAME SHAPE MASK */
+    -webkit-mask-image: url(../images/colorful-btn2.png);
+ -webkit-mask-size: 100% 100%;
+ -webkit-mask-repeat: no-repeat;
+ mask-image: url(../images/colorful-btn2.png);
+ mask-size: 100% 100%;
+ mask-repeat: no-repeat;
+
+    /* Bubble start */
+    clip-path: circle(0% at 50% 50%);
+ transition: clip-path 0.7s ease-in-out;
+ z-index: -1;
+}
+
+/* Hover expand */
+.btn-wrapper a.btn-wrapper-small:hover::before {
+ clip-path: circle(150% at 50% 50%);
+}
+/* 
+.bg_dek img {
+    width: 70%;
+}
+
+.bg_dek {
+    position: absolute;
+    left: -375px;
+    top: 0;
+    transform: translate(0%, 4%);
+} */
+
+/* ----------------------------------------------------- Doctor Detail Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Meet Friend Start ----------------------------------------------------- */
+
+.meet_friend_section {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/bg-services.png);
+	background-size: cover;
+	background-position: top left;
+	background-repeat: no-repeat;
+	padding: 70px 0 70px;
+}
+.meet_friend_section h2 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 40px;
+	text-align: center;
+	margin: 0 0 0px 0;
+}
+.meet_friend_section p {
+	float: left;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	width: 100%;
+	text-align: center;
+}
+.meet_with_more_section {
+	width: 75%;
+	position: relative;
+	margin: auto;
+	padding: 10px 0 0 0;
+	display: flex;
+	flex-direction: column;
+}
+.bg-meet-item-1 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/meet1.png);
+	background-size: contain;
+	background-position: top left;
+	padding: 81px 0 52px 170px;
+	background-repeat: no-repeat;
+}
+.bg-meet-item-1 h4 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 40px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+}
+.bg-meet-item-1 p {
+	float: left;
+	width: 100%;
+	color: #fff;
+	font-weight: 600;
+	margin: 0;
+	font-size: 14px;
+	text-align: left;
+}
+.bg-meet-item-1 p span {
+	float: left;
+	width: 100%;
+	font-weight: 400;
+	font-size: 14px;
+}
+.bg-meet-item-2 {
+	float: right;
+	width: auto;
+	position: relative;
+	background-image: url(../images/meet2.png);
+	background-size: 77%;
+	background-position: top right;
+	padding: 128px 170px 59px 0px;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	margin: -95px 0 0 0;
+}
+.bg-meet-item-2 h4 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #fecf20;
+	font-size: 40px;
+	text-align: right;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+}
+.bg-meet-item-2 p {
+	float: left;
+	width: 100%;
+	color: #fff;
+	font-weight: 600;
+	margin: 0;
+	font-size: 14px;
+	text-align: right;
+	padding: 0 30px 0 0;
+}
+.bg-meet-item-2 p span {
+	float: left;
+	width: 100%;
+	font-weight: 400;
+	font-size: 14px;
+}
+.bg-meet-item-3 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/meet3.png);
+	background-size: contain;
+	background-position: top left;
+	padding: 88px 0 52px 209px;
+	background-repeat: no-repeat;
+	margin: -30px 0 0 0;
+}
+.bg-meet-item-3 h4 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #fecf20;
+	font-size: 40px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+}
+.bg-meet-item-3 p {
+	float: left;
+	width: 100%;
+	color: #fff;
+	font-weight: 600;
+	margin: 0;
+	font-size: 14px;
+	text-align: left;
+}
+.bg-meet-item-3 p span {
+	float: left;
+	width: 100%;
+	font-weight: 400;
+	font-size: 14px;
+}
+.bg-meet-item-4 {
+	float: right;
+	width: auto;
+	position: relative;
+	background-image: url(../images/meet4.png);
+	background-size: 81%;
+	background-position: top right;
+	padding: 81px 210px 70px 0px;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	margin: -50px 0 0 0;
+}
+.bg-meet-item-4 h4 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #fecf20;
+	font-size: 40px;
+	text-align: right;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+}
+.bg-meet-item-4 p {
+	float: left;
+	width: 100%;
+	color: #fff;
+	font-weight: 600;
+	margin: 0;
+	font-size: 14px;
+	text-align: right;
+}
+.bg-meet-item-4 p span {
+	float: left;
+	width: 100%;
+	font-weight: 400;
+	font-size: 14px;
+}
+.bg-meet-item-5 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/meet5.png);
+	background-size: contain;
+	background-position: top left;
+	padding: 73px 0 52px 165px;
+	background-repeat: no-repeat;
+	margin: -30px 0 0 0;
+}
+.bg-meet-item-5 h4 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #fecf20;
+	font-size: 40px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+}
+.bg-meet-item-5 p {
+	float: left;
+	width: 100%;
+	color: #fff;
+	font-weight: 600;
+	margin: 0;
+	font-size: 14px;
+	text-align: left;
+}
+.bg-meet-item-5 p span {
+	float: left;
+	width: 100%;
+	font-weight: 400;
+	font-size: 14px;
+}
+.meet_section_bottom_heading {
+	float: left;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	margin: 50px 0 0 0;
+}
+.meet_section_bottom_heading h5 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #000;
+	font-size: 40px;
+	text-align: center;
+	margin: 0 0 0px 0;
+	line-height: 40px;
+}
+.meet_section_bottom_heading h5 p {
+	text-transform: uppercase !important;
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #000;
+	font-size: 40px;
+	text-align: center;
+	margin: 0 0 0px 0;
+}
+/* ----------------------------------------------------- Meet Friend Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Gallery Start ----------------------------------------------------- */
+
+
+.homegalley {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 70px 0;
+}
+.homegalley h2 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 40px;
+	text-align: center;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+}
+.homegalley p {
+	float: left;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+}
+.clinic-gallery {
+	padding: 30px 0 0 0;
+	text-align: center;
+	float: left;
+	width: 100%;
+}
+.clinic-gallery .gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	margin: 0 0 10px 0;
+}
+.clinic-gallery .gallery-item {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	cursor: pointer;
+ transition: transform .3s ease, box-shadow .3s ease;
+}
+.clinic-gallery .gallery-item:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+/* LIGHTBOX POPUP */
+.lightbox {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	justify-content: center;
+	align-items: center;
+ animation: fadeIn .3s ease;
+	z-index: 2000;
+}
+.lightbox-img {
+	width: 70%;
+	max-width: 900px;
+	border-radius: 8px;
+ animation: zoomIn .3s ease;
+}
+.lightbox .close {
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	font-size: 40px;
+	color: #fff;
+	cursor: pointer;
+}
+/* ARROWS */
+.lightbox .prev, .next {
+	position: absolute;
+	top: 50%;
+	padding: 15px;
+	font-size: 40px;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	user-select: none;
+	transform: translateY(-50%);
+	transition: 0.3s;
+}
+.lightbox .prev:hover, .next:hover {
+	color: #f8a650;
+}
+.lightbox .prev {
+	left: 40px;
+}
+.lightbox .next {
+	right: 40px;
+}
+
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+ from {
+ opacity: 0;
+}
+to {
+	opacity: 1;
+}
+}
+ @keyframes zoomIn {
+ from {
+ transform: scale(0.6);
+}
+to {
+	transform: scale(1);
+}
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+ .gallery-grid {
+ grid-template-columns: repeat(2, 1fr);
+}
+ .gallery-item {
+ height: 150px;
+}
+}
+/* ----------------------------------------------------- Gallery Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Footer Start ----------------------------------------------------- */
+
+
+footer {
+	float: left;
+	width: 100%;
+	position: relative;
+	background: #1f81fc;
+}
+.footer_logo {
+	float: left;
+	width: 25%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	background: #fff;
+	padding: 40px 0 20px;
+	height: 338px;
+}
+.footer_logo a.footer_logo-logo {
+	float: left;
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+.footer_logo a.footer_logo-logo img {
+	text-align: center;
+	width: 160px;
+}
+.footer_item {
+	float: left;
+	width: 100%;
+	position: relative;
+	border-bottom: 5px solid #f8a650;
+}
+p {
+	color: #000;
+}
+.footer_logo p {
+	float: left;
+	width: 100%;
+	margin: auto;
+	font-size: 14px;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	text-align: center;
+}
+.footer_logo ul {
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	justify-content: center;
+}
+.footer_logo ul li {
+	float: left;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.footer_logo ul li img {
+	width: 30px;
+}
+.footer_nav {
+	float: left;
+	width: 75%;
+	display: flex;
+	align-items: flex-start;
+	gap: 30px;
+	padding: 40px 0 30px 150px;
+}
+.footer_nac_col {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.footer_nac_col ul li a {
+	font-size: 13px;
+	color: #ffffff;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	text-align: left;
+	text-decoration: none;
+}
+.footer_nac_col ul li.time_footer {
+	display: flex;
+}
+.timing_col_footer ul.narayan-address {
+	float: left;
+	width: 100%;
+	margin: 0 0 50px 0;
+}
+.footer_nac_col ul li.time_footer p {
+	font-size: 13px;
+	color: #ffffff;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	text-align: left;
+	margin: 0;
+}
+.cobtacr_col ul li img {
+	width: 17px;
+	margin: 0 10px 0 -27px;
+}
+.cobtacr_col ul li {
+	display: flex;
+	align-items: center;
+	gap: 0px;
+}
+.footer_nac_col {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.footer_nac_col h4 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 20px;
+	text-align: left;
+	margin: 0 0 6px 0;
+}
+.footer_nac_col ul {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+.footer_nac_col ul li {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0px 0 8px 0;
+	list-style: none;
+	font-size: 13px;
+	color: #ffffff;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	text-align: left;
+}
+.footer_nac_col ul li:last-child {
+	margin: 0px 0 0px 0;
+}
+.footer_nac_col ul li span {
+	text-align: right;
+}
+.footer_bootm {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 20px;
+	background-color: #fff;
+}
+.footer_nac_col ul li a:hover {
+	color: #f8a650;
+}
+/* ----------------------------------------------------- Footer Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Map Section Start ----------------------------------------------------- */
+
+.map-section {
+	padding: 0 0 15px 0;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.maps-wrapper {
+	display: flex;
+	gap: 10px;
+}
+.map-box {
+	width: 100%;
+	overflow: hidden;
+	height: 500px;
+}
+/* ----------------------------------------------------- Map Section Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Preventive Dentistry Service Start ----------------------------------------------------- */
+
+
+
+
+.services_page_banner {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.services_page_banner img {
+	float: left;
+	width: 100%;
+}
+.service_detail {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 0px 0 70px;
+	margin: -146px 0 0 0;
+	transform: translate(0%, 0%);
+}
+.serices_title {
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.serices_title h2 {
+	text-transform: uppercase;
+	background-image: url(../images/colorful-btn-serce.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: #fff;
+	padding: 7px 20px 3px 20px;
+	font-family: 'Kidzy';
+	font-size: 30px;
+	margin: auto;
+}
+.serices_title p {
+	width: 770px;
+	margin: 4px auto 0 auto;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: center;
+}
+.our_services_item {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 70px 0;
+	background: #d1e6fc;
+}
+.service_item_1 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/servicestyle-1.png);
+	background-size: contain;
+	background-position: top left;
+	padding: 0;
+	background-repeat: no-repeat;
+	height: 186px;
+}
+.service_item_1 h4 {
+	float: left;
+	font-family: 'Kidzy';
+	color: #268fff;
+	font-size: 24px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+	width: 270px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translate(-10%, 110%);
+}
+.service_item_2 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/servicestyle-2.png);
+	background-size: contain;
+	background-position: top left;
+	padding: 0;
+	background-repeat: no-repeat;
+	height: 204px;
+}
+.service_item_2 h4 {
+	float: left;
+	width: 218px;
+	font-family: 'Kidzy';
+	color: #268fff;
+	font-size: 24px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(40%, 193%);
+}
+.service_item_3 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/servicestyle-3.png);
+	background-size: contain;
+	background-position: top left;
+	padding: 0;
+	background-repeat: no-repeat;
+	height: 183px;
+}
+.service_item_3 h4 {
+	float: left;
+	width: 273px;
+	font-family: 'Kidzy';
+	color: #268fff;
+	font-size: 24px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+	position: absolute;
+	left: 36%;
+	top: 0;
+	transform: translate(0%, 112%);
+}
+.service_item_4 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/servicestyle-4.png);
+	background-size: contain;
+	background-position: top left;
+	padding: 0;
+	background-repeat: no-repeat;
+	height: 211px;
+}
+.service_item_4 h4 {
+	float: left;
+	width: 238px;
+	font-family: 'Kidzy';
+	color: #268fff;
+	font-size: 24px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(38%, 150%);
+}
+.service_item_5 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/servicestyle-5.png);
+	background-size: contain;
+	background-position: top left;
+	padding: 0;
+	background-repeat: no-repeat;
+	height: 183px;
+}
+.service_item_5 h4 {
+	float: left;
+	width: 306px;
+	font-family: 'Kidzy';
+	color: #268fff;
+	font-size: 24px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translate(5%, 124%);
+}
+.service_item_6 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/servicestyle-6.png);
+	background-size: contain;
+	background-position: top left;
+	padding: 0;
+	background-repeat: no-repeat;
+	height: 201px;
+}
+.service_item_6 h4 {
+	float: left;
+	width: 130px;
+	font-family: 'Kidzy';
+	color: #268fff;
+	font-size: 24px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(68%, 160%);
+}
+.services_steps {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 70px 0;
+}
+.item_service_step {
+	float: left;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	flex-direction: column;
+}
+.item_service_step p {
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: center;
+	float: left;
+	width: 890px;
+	margin: auto;
+}
+.item_service_step span {
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: center;
+	float: left;
+	width: 100%;
+	margin: 30px 0 0 0;
+}
+.item_service_step ul {
+	float: left;
+	width: 70%;
+	position: relative;
+	padding: 0;
+	margin: 10px auto 0 auto;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	justify-content: center;
+}
+.item_service_step ul li p {
+	float: left;
+	width: 100%;
+	position: relative;
+	color: #fff;
+	font-family: 'Kidzy';
+	font-size: 14px;
+	margin: 15px 0 0 0;
+	text-transform: uppercase;
+}
+.item_service_step ul li img {
+	width: 60px;
+}
+.contetn_dd_explain span {
+	font-size: 18px;
+}
+.item_service_step ul li {
+	float: left;
+	width: 100%;
+	background: #268fff;
+	list-style: none;
+	border-radius: 30px;
+	padding: 20px;
+	text-align: center;
+	height: 100%;
+}
+.service_explain {
+	float: left;
+	width: 100%;
+	position: relative;
+	background: #d1e6fc;
+	padding: 70px 0 50px;
+}
+.explian_service_data {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.top_explain p {
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: center;
+	float: left;
+	margin: auto;
+	width: 740px;
+}
+.top_explain {
+	float: left;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.top_explain p {
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: center;
+	float: left;
+	margin: 0 auto 13px auto;
+	width: 740px;
+}
+.tag_style {
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	margin: auto;
+}
+.tag_style ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px 15px;
+	padding: 0;
+	margin: 7px 0 0;
+	list-style: none;
+}
+.tag_style ul li {
+	background-image: url("../images/tag_style.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	padding: 10px 20px 10px 20px;
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+	float: left;
+	width: 231px;
+}
+.top_explain span {
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: center;
+	float: left;
+	margin: 20px auto 0px auto;
+	width: 650px;
+}
+.sercie_detal_dd {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 40px 0 0 0;
+}
+.item_dd_explain {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 0 0 20px 0;
+}
+.contetn_dd_explain_img {
+	float: left;
+	width: 65%;
+}
+.contetn_dd_explain {
+	float: left;
+	width: 35%;
+	margin: 70px 0 0 -30px;
+}
+.contetn_dd_explain h3 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 35px;
+	margin: 0 0 5px 0;
+	text-transform: uppercase;
+}
+.contetn_dd_explain p {
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: left;
+	float: left;
+	margin: 0px auto 0px auto;
+	width: 370px;
+}
+.contetn_dd_explain_img img {
+	float: left;
+	width: 100%;
+}
+.contetn_dd_explain.center_ite_dd {
+	margin: 70px 0 0 0px;
+	padding: 0 0 0 30px;
+}
+.contetn_dd_explain span {
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: left;
+	float: left;
+	width: 100%;
+}
+/* ----------------------------------------------------- Preventive Dentistry Service Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Dental Dency Service Start ----------------------------------------------------- */
+
+.service_detail.detal_dency {
+	padding: 70px 0 70px;
+	margin: 0;
+}
+.detal_dency h2 {
+	background-image: url(../images/dency.png);
+	padding: 7px 34px 4px 34px;
+}
+.dency_decay_detail h5 {
+	float: left;
+	width: 100%;
+	font-size: 20px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	margin: 15px 0 10px 0;
+	line-height: 22px;
+}
+.dency_decay_detail p {
+	float: left;
+	margin: auto;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	width: 464px;
+}
+.dency_decay_row {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.dency_decay_detail {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.dency_decay_detail img {
+	float: left;
+	width: 100%;
+}
+.emergeny_contetn .serices_title h2 {
+	text-transform: uppercase;
+	background-image: url(../images/servce-big-title.png);
+	padding: 6px 30px 5px 30px;
+}
+.dental_emergnecy {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 70px 0;
+	background: #d1e6fc;
+	margin: 70px 0 0 0;
+}
+.emergeny_contetn {
+	float: left;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.emergeny_contetn ul li {
+	float: left;
+	width: 100%;
+	list-style: none;
+}
+.emergeny_contetn ul {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 0;
+	margin: 25px 0 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 15px;
+}
+.emergeny_contetn ul li .emergency_tips {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 0;
+	text-align: center;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+.emergeny_contetn ul li .emergency_tips img {
+	float: left;
+	width: 100%;
+}
+.bg_tps1 p {
+	width: 80px !important;
+	padding: 0 !important;
+}
+.emergeny_contetn ul li .emergency_tips p {
+	color: #fff;
+	font-size: 24px;
+	font-family: 'Kidzy';
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+	line-height: normal;
+	width: 100%;
+	position: absolute;
+	top: 30px;
+	padding: 0 23px 0 23px;
+}
+.emergeny_contetn p.lasts {
+	float: left;
+	width: 550px;
+	margin: 20px auto 0 auto;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: center;
+}
+.paediatric_root_section {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 70px 0 0 0;
+}
+.paediatric_root_content {
+	float: left;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.paediatric_root_content h3 {
+	float: left;
+	width: 100%;
+	font-size: 20px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	margin: 0 0 20px 0;
+	line-height: 22px;
+	text-transform: uppercase;
+}
+.paediatric_root_content p {
+	float: left;
+	margin: auto;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	width: 464px;
+}
+.paediatric_root_content img {
+	position: absolute;
+	width: 180px;
+	right: 0;
+	transform: translate(-100%, 40%);
+	z-index: 9;
+}
+/* ----------------------------------------------------- Dental Dency Service Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Crowns & Tooth Restoration Service Start ----------------------------------------------------- */
+
+
+
+.pediatric {
+	float: left;
+	width: 100%;
+	position: relative;
+	background: #268fff;
+	padding: 10px 0;
+}
+.pediatric_contetn {
+	float: left;
+	width: 100%;
+	position: relative;
+	height: 100%;
+}
+.pediatric_contetn h5 {
+	float: left;
+	width: 100%;
+	font-size: 20px;
+	text-decoration: none;
+	color: #f8a650;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	margin: 0px 0 10px 0;
+	line-height: 22px;
+	text-transform: uppercase;
+}
+.pediatric .container {
+	float: left;
+	width: 100%;
+	max-width: 100% !important;
+}
+.siicde-nned {
+	padding: 70px 0 0 64px;
+}
+.pediatric_contetn p {
+	float: left;
+	margin: auto;
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	width: 474px;
+}
+.pediatric_contetn img {
+	float: left;
+	width: 100%;
+}
+.image_dek_peiatric img {
+	width: 250px;
+	text-align: end;/* margin: 0px 0 -99px 0; */
+}
+.image_dek_peiatric {
+	float: left;
+	width: 100%;
+	position: relative;
+	text-align: right;
+	display: flex;
+	justify-content: end;
+	/* height: 100%; */
+    position: absolute;
+	bottom: -31px;
+	right: 0;
+}
+.crowns_teeth_service {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 70px 0;
+	overflow: hidden;
+}
+.crowns_service_contetn {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 0 0 20px 0;
+}
+.crowns_service_contetn img {
+	float: left;
+	width: 100%;
+}
+.crowns_service_contetn h2 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 35px;
+	margin: 0 0 10px 0;
+	text-transform: uppercase;
+}
+.crowns_service_contetn p {
+	float: left;
+	width: 100%;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	text-align: left;
+	margin: 0;
+}
+.relate {
+	position: absolute;
+	right: -210px;
+	bottom: 0;
+}
+.relate img {
+	width: 240px;
+}
+.crowns_service_contetn.crown_teeth_contetn1 {
+	margin: 40px 0 0 0px;
+}
+.relate2 {
+	position: absolute;
+	left: -178px;
+	bottom: 0;
+}
+.crowns_service_contetn.crown_teeth_contetn2 {
+	padding: 110px 0 0 70px;
+}
+.relate2 img {
+	width: 240px;
+}
+.servoe_bootm p {
+	float: left;
+	width: 730px;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	text-align: center;
+	margin: auto !important;
+}
+.servoe_bootm {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 20px 0 0px 0;
+	display: flex;
+	justify-content: center;
+}
+.service_detail.crown_tten {
+	padding: 70px 0 70px;
+	margin: 0;
+}
+.crown_tten h2 {
+	background-image: url(../images/dency.png);
+	padding: 7px 34px 4px 34px;
+}
+/* ----------------------------------------------------- Crowns & Tooth Restoration Service Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Orthodontics Start ----------------------------------------------------- */
+
+
+
+
+.service_detail.orthodontics_title {
+	padding: 70px 0 70px;
+	margin: 0;
+}
+.orthodontics_title .serices_title h2 {
+	background-image: url(../images/orthodontics.png);
+}
+.orthodontics_service .relate {
+	right: -10px;
+	bottom: -11px;
+}
+.orthodontics_service .relate img {
+	width: 90px;
+}
+.orthodontics_service .relate2 img {
+	width: 110px;
+}
+.orthodontics_service .relate2 {
+	position: absolute;
+	left: -77px;
+	bottom: -21px;
+}
+.orthodontics_service .crowns_service_contetn p {
+	width: 492px;
+}
+/* ----------------------------------------------------- Orthodontics Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Benifit Of Service Start ----------------------------------------------------- */
+
+
+
+.benifits_of_service {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 30px 0;
+}
+.title {
+	float: left;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.title h2 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 35px;
+	margin: 0 0 20px 0;
+	text-transform: uppercase;
+	text-align: center;
+}
+.benifits_of_service ul {
+	float: left;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	padding: 0;
+	gap: 20px;
+	margin: 0;
+}
+.benifits_of_service ul li {
+	background: #258fff;
+	list-style: none;
+	padding: 15px;
+	border-radius: 35px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.benifits_of_service ul li img {
+	width: 60px;
+}
+.benifits_of_service ul li p {
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Kidzy';
+	text-transform: uppercase;
+	text-align: center;
+	margin: 15px 0 0 0;
+	width: 100%;
+	line-height: normal;
+}
+.space_maintian h2 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 35px;
+	margin: 0 0 10px 0;
+	text-transform: uppercase;
+}
+.space_mainteners {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 20px 0 50px 0;
+}
+.space_maintian img {
+	float: left;
+	width: 100%;
+}
+.space_maintian {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.space_maintian p {
+	float: left;
+	width: 503px;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	text-align: left;
+	margin: 0;
+}
+.kid_right {
+	float: left;
+	width: 100%;
+	position: absolute;
+	right: -44px;
+	bottom: -20px;
+	text-align: right;
+	display: flex;
+	justify-content: end;
+}
+.kid_right img {
+	width: 110px;
+}
+.orthodenic_evaluation .serices_title h2 {
+	background-image: url(../images/orthodontics.png);
+}
+.orthodenic_evaluation .serices_title p {
+	width: 460px;
+}
+.orthodenic_evaluation {
+	float: left;
+	width: 100%;
+	position: relative;
+	background: #d1e5fb;
+	padding: 50px 0;
+}
+.item_evaluation ul li p {
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Kidzy';
+	text-transform: uppercase;
+	text-align: center;
+	margin: 15px 0 0 0;
+	line-height: normal;
+	width: 180px;
+}
+.item_evaluation ul li {
+	background: #258fff;
+	list-style: none;
+	padding: 15px;
+	border-radius: 15px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	position: relative;
+	gap: 15px;
+}
+.item_evaluation ul {
+	float: left;
+	width: 60%;
+	position: relative;
+	padding: 0;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+.item_evaluation {
+	float: left;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: 20px 0 0 0;
+}
+.item_evaluation ul li img {
+	width: 150px;
+}
+/* ----------------------------------------------------- Benifit Of Service Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Habit Correction Therapy service Start ----------------------------------------------------- */
+
+
+
+.habbit_correction .serices_title h2 {
+	background-image: url(../images/dency.png);
+}
+.habbit_correction .orthodontics_service .relate {
+	right: 0;
+	bottom: -11px;
+}
+.habbit_correction .orthodontics_service .relate img {
+	width: 150px;
+}
+.habbit_correction .crowns_teeth_service {
+	padding: 0px 0 70px;
+}
+.service_detail.orthodontics_title {
+	padding: 50px 0 50px;
+	margin: 0;
+}
+.habit_correction_service {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 0 0 70px 0;
+}
+.habit_image_correction {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.habit_image_correction img {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 0 0 10px 0;
+}
+.habit_image_correction p {
+	float: left;
+	width: 100%;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	text-align: center;
+	margin: 0;
+	text-transform: uppercase;
+}
+.red_fox_dd_img {
+	float: left;
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 0 30px 0;
+	flex-direction: column;
+}
+.red_fox_dd_img p {
+	float: left;
+	width: 770px;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	text-align: center;
+	margin: auto;
+}
+.red_fox_dd_img img {
+	position: absolute;
+	top: -30px;
+	right: -50px;
+	width: 170px;
+	z-index: 9;
+}
+/* ----------------------------------------------------- Habit Correction Therapy service Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Behaviour Anxiety service Start ----------------------------------------------------- */
+
+.behaviour_anxiety .service_detail.orthodontics_title {
+	padding: 70px 0 0px;
+	margin: 0;
+}
+.benifits_of_service.behaviour_anxiety_servcie {
+	margin: 0 0 30px 0;
+}
+.behaviour_anxiety .serices_title h2 {
+	background-image: url(../images/all_big_title_bg.png);
+	width: 550px;
+}
+.behaviour_anxiety .relate {
+	right: -90px;
+	bottom: -32px;
+}
+.behaviour_anxiety .relate img {
+	width: 160px;
+}
+.behaviour_anxiety .crowns_service_contetn.fierst_detailsection {
+	padding: 60px 0 0 0;
+}
+.crowns_service_contetn strong {
+	float: left;
+	width: 100%;
+	color: #000;
+}
+.behaviour_anxiety_servcie .title h2 {
+	margin: 0 0 0px 0;
+}
+.behaviour_anxiety_servcie .title p {
+	float: left;
+	width: 480px;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	text-align: center;
+	margin: auto;
+}
+.behaviour_anxiety_servcie ul {
+	grid-template-columns: repeat(4, 1fr) !important;
+	margin: auto;
+	width: 73%;
+	float: none;
+}
+.behaviour_anxiety_servcie .title {
+	margin: 0 0 30px 0;
+}
+.behaviour_anxiety_servcie {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.last_detail_section_servcie {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 20px 0 70px 0;
+}
+.last_detail_section_servcie img {
+	width: 80px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translate(-80%, -80%);
+}
+.last_detail_section_servcie p {
+	float: left;
+	width: 100%;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	text-align: center;
+	margin: auto;
+}
+.last_detail_section_servcie h2 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 35px;
+	margin: 10px 0 0px 0;
+	text-transform: uppercase;
+	text-align: center;
+}
+/* ----------------------------------------------------- Behaviour Anxiety service Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+.loader-wrap {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+	display: none;
+}
+/* center preloader */
+.preloader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 999999999999999;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url(../images/preloader.svg);
+}
+/* layers */
+.loader-wrap .layer {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 33.3333%;
+	overflow: hidden;
+}
+.layer-one {
+	left: 0;
+}
+.layer-two {
+	left: 33.3333%;
+}
+.layer-three {
+	left: 66.6666%;
+}
+/* overlays */
+.loader-wrap .layer .overlay {
+	position: absolute;
+	left: -100%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #1f81fc;
+}
+/* animation */
+.layer-one .overlay {
+	animation: slide 1.6s cubic-bezier(.4, 0, .2, 1) forwards;
+}
+.layer-two .overlay {
+ animation: slide 1.6s cubic-bezier(.4, 0, .2, 1) forwards .25s;
+}
+.layer-three .overlay {
+ animation: slide 1.6s cubic-bezier(.4, 0, .2, 1) forwards .5s;
+}
+ @keyframes slide {
+ to {
+ left: 0;
+}
+}
+.animate-heading {
+	overflow: hidden;
+}
+.animate-heading span {
+	position: relative;
+	/* ?? key */
+    opacity: 0;
+	top: 30px;
+	animation: textUp 0.6s ease forwards;
+}
+ @keyframes textUp {
+ to {
+ opacity: 1;
+ top: 0;
+}
+}
+.image_animation {
+	width: 100%;
+	/* Image container width */
+    height: 100%;
+	overflow: hidden;
+	position: relative;
+	visibility: hidden;/* Initially hidden, GSAP will show */
+}
+.image_animation img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform-origin: left;
+}
+main {
+	overflow: hidden;
+}
+html {
+	scroll-behavior: smooth;
+}
+/* ----------------------------------------------------- Parent Corner service Start ----------------------------------------------------- */
+
+
+
+.service_detail.parent-corner {
+	margin: 0;
+	padding: 70px 0;
+}
+.parent-corner-item-1 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/corner-1.png);
+	background-size: contain;
+	aspect-ratio: 14 / 4;
+	background-repeat: no-repeat;
+}
+.parent-corner-item-1 h4 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #268fff;
+	font-size: 28px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(30%, 363%);
+}
+.parent-corner-item-1 p {
+	float: left;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(50.8%, 220%);
+	width: 660px;
+	margin: 4px auto 0 auto;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: left;
+}
+.parent-corner-item-2 h4 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #268fff;
+	font-size: 28px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(15%, 310%);
+}
+.parent-corner-item-2 p {
+	float: left;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(16.8%, 310%);
+	width: 660px;
+	margin: 4px auto 0 auto;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: right;
+}
+.parent-corner-item-2 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/corner-2.png);
+	background-size: contain;
+	aspect-ratio: 18.5 / 4;
+	background-repeat: no-repeat;
+}
+.parent-corner-item-3 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/corner-3.png);
+	background-size: cover;
+	aspect-ratio: 16 / 4;
+	background-repeat: no-repeat;
+	max-width: 100%;
+}
+.parent-corner-item-3 h4 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #268fff;
+	font-size: 28px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(24%, 415%);
+}
+.parent-corner-item-3 p {
+	float: left;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(40.8%, 190%);
+	width: 660px;
+	margin: 4px auto 0 auto;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: left;
+}
+.parent-corner-item-4 h4 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #268fff;
+	font-size: 28px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(10%, 298%);
+}
+.parent-corner-item-4 p {
+	float: left;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(16.8%, 190%);
+	width: 660px;
+	margin: 4px auto 0 auto;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: right;
+}
+.parent-corner-item-4 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/corner-4.png);
+	background-size: contain;
+	aspect-ratio: 14.7 / 4;
+	background-repeat: no-repeat;
+}
+.parent-corner-item-5 {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/corner-5.png);
+	background-size: contain;
+	aspect-ratio: 15 / 4;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+.parent-corner-item-5 h4 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #268fff;
+	font-size: 28px;
+	text-align: left;
+	margin: 0 0 0px 0;
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(34%, 372%);
+}
+.parent-corner-item-5 p {
+	float: left;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(57.8%, 230%);
+	width: 660px;
+	margin: 4px auto 0 auto;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: left;
+}
+.explian_content {
+	float: left;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	padding: 50px 0 0 0;
+}
+.explian_content p {
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: center;
+	margin: 0;
+}
+.our_services_item.parent-corner-content {
+	padding: 70px 0 40px;
+}
+.parent-corner .serices_title h2 {
+	padding: 2px 20px 3px 20px;
+}
+.banner-small {
+	float: left;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	padding: 30px;
+	background: #f8a650;
+	margin: 0px 0 0 0;
+}
+.banner-small h2 {
+	font-family: 'Poppins';
+	font-size: 24px;
+	color: #fff;
+	font-weight: 500;
+	margin: 0;
+}
+.banner-small p {
+	float: left;
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+	width: 100%;
+	margin: 5px 0 0 0;
+	font-weight: 400;
+}
+.book-appointment-forms {
+	float: left;
+	width: 100%;
+	margin: 50px 0;
+}
+.forms-appointmet {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.forms-appointmet h2 {
+	font-family: 'Poppins';
+	font-weight: 600;
+	font-size: 24px;
+	margin: 0 0 10px 0;
+}
+.forms-appointmet p {
+	float: left;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	width: 100%;
+	margin: 0;
+	font-weight: 400;
+}
+.kiddoz-form {
+	max-width: 100%;
+	margin: auto;
+}
+.kiddoz-form .form-group {
+	margin-bottom: 15px;
+	float: left;
+	width: 50%;
+	padding: 0 10px 0 0px;
+}
+.kiddoz-form input, .kiddoz-form textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1.4px solid #000000;
+	font-size: 14px;
+	color: #000;
+	font-family: 'Poppins';
+}
+ .kiddoz-form input, .kiddoz-form textarea::placeholder {
+ color: #000;
+}
+ .kiddoz-form input::placeholder {
+ color: #000;
+}
+.kiddoz-form textarea {
+	resize: none;
+	height: 100px;
+}
+.btn_form {
+	float: left;
+	width: 100%;
+	margin: auto;
+	justify-content: center;
+	text-align: center;
+}
+button.momo-btn.btn-wrapper-big {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-image: url(../images/colorful-btn.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	color: #fff;
+	padding: 15px 30px 14px 30px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	overflow: hidden;
+	z-index: 1;
+	width: 250px;
+	border: none;
+	background-color: #fdfdfd00;
+}
+ button.momo-btn.btn-wrapper-big::before {
+ content: "";
+ position: absolute;
+ inset: 0;
+ background-color: #268eff;
+ -webkit-mask-image: url(../images/colorful-btn.png);
+ -webkit-mask-size: 100% 100%;
+ -webkit-mask-repeat: no-repeat;
+ mask-image: url(../images/colorful-btn.png);
+ mask-size: 100% 100%;
+ mask-repeat: no-repeat;
+ clip-path: circle(0% at 50% 50%);
+ transition: clip-path 0.7s ease-in-out;
+ z-index: -1;
+}
+ button.momo-btn.btn-wrapper-big:hover::before {
+ clip-path: circle(150% at 50% 50%);
+}
+.momo-btn:hover {
+	background: #ff5c00;
+}
+.forms-appointmet .map-box {
+	width: 100%;
+	overflow: hidden;
+	height: 250px;
+}
+.forms-appointmet ul {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 20px 0 0 0;
+	padding: 0;
+}
+.forms-appointmet ul li {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 0 0 15px 0;
+	color: #000;
+	font-family: 'Poppins';
+	font-weight: 500;
+	font-size: 14px;
+}
+.forms-appointmet ul li img {
+	width: 20px;
+}
+.forms-appointmet ul li a {
+	color: #000;
+	text-decoration: none;
+}
+/* ----------------------------------------------------- Parent Corner service Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Contact Us Start ----------------------------------------------------- */
+
+.contact-page {
+	padding: 70px 0;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.contact-title h2 {
+	float: left;
+	width: 100%;
+	font-family: 'Kidzy';
+	color: #f8a650;
+	font-size: 35px;
+	margin: 0;
+}
+.contact-title img {
+	width: 100px;
+	margin: 0 0 10px 0;
+}
+.contact-locations {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	font-weight: 200;
+	max-width: 100%;
+	float: left;
+	width: 100%;
+	position: relative;
+	gap: 10px;
+	margin: 20px 0 0 0;
+}
+.contact-card {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.contact-info-box .btn-wrapper a.btn-wrapper-big {
+	width: 200px;
+}
+.contact-card .map-box {
+	width: 100%;
+	overflow: hidden;
+	height: 320px;
+}
+.contact-card-content {
+	padding: 10px 0;
+}
+.contact-card-content h3 {
+	font-size: 18px;
+	color: #000;
+	font-family: 'Poppins';
+	font-weight: 500;
+	margin: 5px 0 0px 0;
+}
+.contact-info-box {
+	margin-top: 30px;
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 0;
+}
+.contact-info-box .btn-wrapper {
+	margin: 0px 0 0 0;
+}
+.call-btn, .whatsapp-btn {
+	display: inline-block;
+	margin: 8px;
+	padding: 14px 26px;
+	border-radius: 50px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 16px;
+}
+.call-btn:hover {
+	background: #ff5252;
+}
+.whatsapp-btn:hover {
+	background: #1ebe5d;
+}
+.email-text {
+	margin-top: 10px;
+	font-weight: 500;
+	color: #000;
+	float: left;
+	width: 100%;
+	margin-bottom: 0;
+	font-size: 14px;
+}
+.email-text a {
+	font-weight: 500;
+	color: #000;
+	float: left;
+	width: 100%;
+	margin-bottom: 0;
+	font-size: 14px;
+	text-decoration: none;
+}
+.social-links {
+	margin-top: 10px;
+	float: left;
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+.social-links a {
+	margin: 0;
+	text-decoration: none;
+	font-weight: 500;
+	color: #0077cc;
+}
+.social-links a:hover {
+	color: #ff6b6b;
+}
+.social-links a img {
+	width: 35px;
+}
+/* ----------------------------------------------------- Contact Us Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Meet the Doctor Start ----------------------------------------------------- */
+
+.service_detail.meet-the-doctor {
+	margin: 0;
+	padding: 70px 0 0;
+}
+.meet-the-doctor h2 {
+	padding: 4px 40px 3px 40px !important;
+}
+.mmet_the_docotr .doctor_detail_contetn h5 {
+	font-size: 20px;
+}
+.mmet_the_docotr .doctor_detail_contetn p {
+	margin: 0 0 15px 0;
+}
+.mmet_the_docotr .doctor_detail_contetn span {
+	text-transform: uppercase;
+}
+.doctor_detail_section.mmet_the_docotr {
+	background: none !important;
+	padding: 0 0 0px 0;
+}
+.dental_emergnecy.doctor_detail_wrapper {
+	padding: 20px 0 70px 0;
+}
+.doctor_detail_main {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 70px 0;
+}
+.doctor_detail_main .serices_title {
+	margin: 0 0 20px 0;
+}
+.doctor_with_kids {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.doctor_with_kids img {
+	float: left;
+	width: 100%;
+}
+.doctor_with_kids ul {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 15px;
+}
+.doctor_with_kids ul li {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.doctor_with_kids ul li img {
+	float: left;
+	width: 20px;
+}
+.doctor_with_kids ul li p {
+	margin: 0;
+	font-size: 14px;
+	font-family: 'Poppins';
+	color: #000;
+	font-weight: 500;
+}
+.docter_detail_tabs {
+	float: left;
+	width: 50%;
+}
+.doctor_full_detail {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 0 0 70px 0;
+}
+.doctor_detail_tabs_wrapper {
+	float: left;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 27px;
+	padding: 0;
+}
+.doctor_detail_tabs_wrapper .doctor_with_kids {
+	float: left;
+	width: 50%;
+}
+.doctor_detail_tabs_wrapper button.accordion-button.collapsed {
+	text-transform: uppercase;
+	background-image: url(../images/servce-big-title.png) !important;
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: #fff;
+	padding: 5px 20px 6px 31px;
+	font-family: 'Kidzy';
+	font-size: 30px;
+	margin: auto;
+	border: none !important;
+	outline: none !important;
+	background-color: #fdfdfd00;
+	border-left: none !important;
+	border-top: none !important;
+	border-right: none !important;
+	border-bottom: none !important;
+}
+.doctor_detail_tabs_wrapper button.accordion-button {
+	background: #f8a650;
+	margin: 0;
+	border: none !important;
+	color: #fff;
+	padding: 15px;
+	font-family: 'Kidzy';
+	font-size: 30px;
+	box-shadow: none;
+	border-radius: 0 !important;
+}
+.doctor_detail_tabs_wrapper .accordion-collapse {
+	background: #f8a650;
+	padding: 0 0 0;
+	margin: 0;
+	border: none;
+}
+.doctor_detail_tabs_wrapper .accordion-item {
+	border: none;
+	margin: 10px 0 10px 0;
+}
+ button:focus:not(:focus-visible) {
+ outline: 0;
+ box-shadow: none !important;
+}
+.doctor_detail_tabs_wrapper div#accordionExample {
+	float: left;
+	width: 84%;
+}
+ .doctor_detail_tabs_wrapper .accordion-button::after {
+ display: none;
+}
+.doctor_detail_tabs_wrapper .accordion-collapse {
+	border-radius: 0 !important;
+}
+.doctor_detail_tabs_wrapper .accordion-body ul {
+	padding: 0 0 15px 0;
+	margin: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.doctor_detail_tabs_wrapper .accordion-body ul li {
+	font-family: 'Poppins';
+	font-size: 14px;
+	font-weight: 500;
+	list-style: none;
+	color: #fff;
+	padding: 0 0 0px 0;
+	margin: 0;
+	display: flex;
+	gap: 10px;
+}
+.doctor_detail_tabs_wrapper .accordion-body ul li p {
+	color: #fff;
+	margin: 0;
+}
+.doctor_detail_tabs_wrapper .accordion-body ul li p strong {
+	float: left;
+	width: 100%;
+}
+.doctor_detail_tabs_wrapper .accordion-body {
+	padding: 0 15px;
+}
+.doctor_trust_wrapper {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 50px 0 0 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.doctor_trust_wrapper ul {
+	float: left !important;
+	width: 80% !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	display: grid !important;
+	grid-template-columns: repeat(2, 1fr) !important;
+	gap: 50px !important;
+	margin: auto !important;
+}
+.doctor_trust_wrapper ul li {
+	float: left;
+	width: 401px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	color: #000;
+	font-family: 'Kidzy';
+	text-transform: uppercase;
+	gap: 15px;
+}
+.doctor_trust_wrapper ul li img {
+	width: 100px;
+}
+/* ----------------------------------------------------- Meet the Doctor Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Before and After Start ----------------------------------------------------- */
+
+.service_detail.after_before {
+	margin: 0;
+	padding: 70px 0;
+}
+.disclaimer {
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin: 10px 0 50px 0;
+}
+.disclaimer p {
+	float: left;
+	width: 100%;
+	font-size: 12px;
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	line-height: 21px;
+	margin: 0;
+}
+.service_detail.after_before .serices_title h2 {
+	text-transform: uppercase;
+	background-image: url(../images/colorful-btn-serce.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: #fff;
+	padding: 9px 30px 5px 30px;
+	font-family: 'Kidzy';
+	font-size: 30px;
+	margin: auto;
+}
+.before_and_after_page {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.result_after_treatment {
+	float: left;
+	width: 100%;
+	position: relative;
+	display: flex;
+	gap: 40px;
+	margin-bottom: 40px;
+	justify-content: center;
+}
+.images_result img {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.images_result {
+	float: left;
+	width: 50%;
+	position: relative;
+	text-align: center;
+}
+.images_result p {
+	font-size: 20px;
+	color: #000;
+	font-weight: bold;
+	margin: 5px 0 0 0;
+	float: left;
+	width: 100%;
+	text-transform: uppercase;
+}
+/* ----------------------------------------------------- Before and After Close ----------------------------------------------------- */
+
+
+
+
+/* ----------------------------------------------------- Clinic Tour Start ----------------------------------------------------- */
+
+
+.service_detail.clinic-tour {
+	margin: 0;
+	padding: 70px 0;
+}
+.service_detail.clinic-tour .serices_title h2 {
+	padding: 5px 85px 0px 70px;
+}
+.clinic-gallery_main {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 0 0 70px 0;
+}
+.clinic-gallery_main .clinic-gallery {
+	padding: 0;
+}
+.clinic-gallery_main .clinic-gallery .gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	margin: 0 0 0px 0;
+}
+/* ----------------------------------------------------- Clinic Tour Close ----------------------------------------------------- */
+
+
+
+
+
+
+/* ----------------------------------------------------- Happy Kids Start ----------------------------------------------------- */
+
+
+.service_detail.happy-kids {
+	margin: 0;
+	padding: 70px 0;
+}
+/* ----------------------------------------------------- Happy Kids Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- Testomonials Start ----------------------------------------------------- */
+
+
+.service_detail.testomonials_title {
+	margin: 0;
+	padding: 70px 0;
+}
+.service_detail.testomonials_title .serices_title h2 {
+	padding: 5px 70px 3px 70px;
+}
+.testomonilas_wrapper {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.bg_topclud {
+	float: left;
+	width: 100%;
+}
+.bg_topclud img {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.testomonilas_item {
+	float: left;
+	width: 100%;
+	position: relative;
+	background: #d1e6fc;
+	padding: 50px 0 70px 0;
+}
+.review_contetn {
+	float: left;
+	width: 100%;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+.item_reviews {
+	float: left;
+	width: 100%;
+	position: relative;
+	background: #ffffff;
+	padding: 35px;
+	border-radius: 15px;
+	box-shadow: #1f81fc 5.95px 5.95px 0.6px;
+}
+.item_reviews p {
+	margin: 0 0 10px 0;
+	font-size: 14px;
+	font-family: 'Poppins';
+	color: #000;
+	font-weight: 500;
+}
+.review_owner {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 0px 0;
+}
+.review_owner p {
+	color: #f8a650;
+	font-size: 18px;
+	margin: 0;
+	font-weight: 600;
+}
+/* ----------------------------------------------------- Testomonials  Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- dental-tips-page  Start ----------------------------------------------------- */
+
+
+
+
+.dental-tips-page {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 70px 0;
+}
+.contetn_tips {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 30px 0 0 0;
+}
+.contetn_tips ul {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 15px;
+}
+.contetn_tips ul li {
+	float: left;
+	width: 100%;
+	position: relative;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+.contetn_tips ul li img {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.contetn_tips ul li p {
+	position: absolute;
+	color: #fff;
+	font-family: 'Kidzy';
+	font-size: 20px;
+	margin: 15px 0 0 0;
+	text-transform: uppercase;
+	bottom: 26px;
+	text-align: center;
+	line-height: normal;
+	width: 210px;
+}
+.download_tip {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 50px 0 0 0;
+}
+.brushig_video {
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	float: left;
+	position: relative;
+	margin: auto;
+}
+.brushig_video video {
+	float: left;
+	width: 100%;
+	border-radius: 0;
+}
+/* Laptop body */
+.laptop {
+	width: 100%;
+	max-width: 100%;
+	background: #f8a650;
+	border-radius: 18px;
+	padding: 18px 18px 18px;
+	box-shadow: 0 25px 60px rgb(31 129 252 / 0%);
+}
+/* Screen area */
+.screen {
+	background: #000;
+	border-radius: 10px;
+	overflow: hidden;
+}
+/* Video fit inside screen */
+
+
+.keyboard {
+	margin: 18px auto 0;
+	width: 80%;
+	height: 14px;
+	background: #268fff;
+	border-radius: 0 0 20px 20px;
+}
+.downlaod_btn p {
+	margin: 0 0 0px 0;
+	font-size: 18px;
+	font-family: 'Kidzy';
+	color: #000;
+	text-align: center;
+}
+.downlaod_btn {
+	float: left;
+	width: auto;
+}
+.downlaod_btn a.btn-wrapper-big {
+	width: 310px !important;
+	text-align: center;
+	font-family: 'Kidzy';
+	font-size: 18px;
+	font-weight: 200;
+	padding: 8px 50px 3px 50px;
+}
+.download_tip .btn-wrapper {
+	gap: 40px;
+}
+.brushing_time {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 70px 0 0 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+.brushing_time .serices_title h2 {
+	padding: 3px 30px 3px 30px;
+	font-size: 30px;
+}
+/* ----------------------------------------------------- dental-tips-page  Close ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.book-appointment-popup {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url(../images/popup_bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 50px 40px 70px;
+}
+.book-appointment-popup .modal-header {
+	border: none;
+}
+.popup_contetn .serices_title h2 {
+	font-size: 24px;
+}
+.modal-body {
+	padding: 0;
+}
+.form_kiddow_kids {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 20px 0 0 0;
+}
+.form_kiddow_kids .form-group {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 0 0 10px 0;
+	display: flex;
+	align-items: center;
+}
+.form_kiddow_kids .form-group label {
+	font-size: 14px;
+	color: #fff;
+	font-family: 'Poppins';
+	width: 170px;
+}
+.form_kiddow_kids .form-group input {
+	float: left;
+	width: 100%;
+	position: relative;
+	height: 43px;
+	border: none;
+	padding: 10px 10px;
+}
+.last_label {
+	width: 80px !important;
+}
+.last_label2 {
+	width: 214px !important;
+}
+.form-group.spilit {
+	gap: 20px !important;
+}
+.form-group.spilit .form-row {
+	display: flex;
+	align-items: center;
+}
+.modal-dialog.modal-dialog-centered.modal-lg {
+	max-width: 682px;
+}
+.book-appointment-popup .modal-header button {
+	color: #fff;
+	filter: invert(1);
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	left: -20px;
+}
+.book-appointment-popup .modal-header {
+	border: none;
+	position: absolute;
+	right: -15px;
+	width: 40px;
+	height: 40px;
+	background: #f8a650;
+	border-radius: 100%;
+	top: -17px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+}
+.form-group.submit-btn button {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'Kidzy';
+	font-size: 24px;
+	overflow: hidden;
+	z-index: 1;
+	width: 330px;
+	border: none;
+	background: #f8a650;
+	padding: 8px 5px 5px 5px;
+	border-radius: 14px;
+	line-height: normal;
+}
+.form-group.submit-btn {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 50px 0 0 0;
+	display: flex;
+	justify-content: center;
+}
+.form-group.submit-btn img {
+	width: 100px;
+	position: absolute;
+	z-index: 9;
+	right: 73px;
+	top: -13px;
+}
+.doctor_with_kids ul li a {
+	text-decoration-color: #f8a650;
+}
+/*--------------------------------- .kidd slider ----------------------------------*/
+
+
+.kidd_slider_gallery {
+	position: relative;
+	padding:30px 0 0;
+ 
+}
+.kidd_slider img {
+	width: 100%;
+ 	object-fit: cover; 
+	border-radius: 6px; 
+}
+.kidd_slider .owl-nav {
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	transform: translateY(-50%);
+}
+.kidd_slider .owl-nav button.owl-prev {
+	position: absolute;
+	left: -25px;
+}
+.kidd_slider .owl-nav button.owl-next {
+	position: absolute;
+	right: -25px;
+}
+.kidd_slider .owl-nav span {
+	font-size: 35px;
+	color: #000;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	width: 40px;
+	height: 40px;
+	float: left;
+	line-height: 32px;
+}
+/*--------------------------------- .kidd slider ----------------------------------*/
