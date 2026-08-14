@@ -136,23 +136,29 @@ AOS.init();
 
 
 
-window.addEventListener("load", function () {
-  const loader = document.getElementById("loader");
-  loader.style.display = "block";
+const loader = document.getElementById("loader");
+const preloaderClose = document.getElementById("preloader-close");
 
-  setTimeout(() => {
-    loader.style.opacity = "0";
-    loader.style.transition = "0.8s ease";
-  }, 1800);
+if (loader) {
+  window.addEventListener("load", function () {
+    loader.style.display = "block";
 
-  setTimeout(() => {
+    setTimeout(() => {
+      loader.style.opacity = "0";
+      loader.style.transition = "0.8s ease";
+    }, 1800);
+
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 2400);
+  });
+}
+
+if (preloaderClose && loader) {
+  preloaderClose.onclick = function () {
     loader.style.display = "none";
-  }, 2400);
-});
-
-document.getElementById("preloader-close").onclick = function(){
-  document.getElementById("loader").style.display = "none";
-};
+  };
+}
 
 
 
