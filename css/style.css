@@ -3113,11 +3113,17 @@ html {
 .form_kiddow_kids .form-group .consent-label {
 	color: #fff;
 }
-.consent-label input[type="checkbox"] {
-	width: 18px;
-	height: 18px;
+.consent-group .consent-label input[type="checkbox"],
+.kiddoz-form .consent-label input[type="checkbox"],
+.form_kiddow_kids .form-group .consent-label input[type="checkbox"] {
+	float: none;
+	width: 18px !important;
+	height: 18px !important;
 	min-width: 18px;
-	margin-top: 2px;
+	max-width: 18px;
+	flex: 0 0 18px;
+	padding: 0 !important;
+	margin: 2px 0 0 0;
 	accent-color: #f8a650;
 }
 .consent-label a {
