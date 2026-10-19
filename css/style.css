@@ -3094,6 +3094,36 @@ html {
 	resize: none;
 	height: 100px;
 }
+.consent-group {
+	align-items: flex-start !important;
+}
+.consent-group .consent-label,
+.kiddoz-form .consent-label,
+.form_kiddow_kids .form-group .consent-label {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	width: 100%;
+	cursor: pointer;
+	font-size: 13px;
+	line-height: 1.5;
+	font-family: "Poppins", sans-serif;
+	color: #000;
+}
+.form_kiddow_kids .form-group .consent-label {
+	color: #fff;
+}
+.consent-label input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+	min-width: 18px;
+	margin-top: 2px;
+	accent-color: #f8a650;
+}
+.consent-label a {
+	color: #f8a650;
+	text-decoration: underline;
+}
 .btn_form {
 	float: left;
 	width: 100%;
