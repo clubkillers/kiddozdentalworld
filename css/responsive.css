@@ -1022,7 +1022,7 @@
      }
 
      .footer_logo {
-         height: 410px;
+         min-height: 410px;
      }
  }
 

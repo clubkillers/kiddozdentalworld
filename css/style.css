@@ -1248,14 +1248,14 @@ footer {
 }
 .footer_logo {
 	float: left;
-	width: 25%;
+	width: 30%;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
 	background: #fff;
 	padding: 40px 0 20px;
-	height: 338px;
+	min-height: 338px;
 }
 .footer_logo a.footer_logo-logo {
 	float: left;
@@ -1286,6 +1286,24 @@ p {
 	font-weight: 600;
 	text-align: center;
 }
+.footer_logo p.footer_reg {
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #555;
+	margin: 0;
+}
+.footer_disclaimer {
+	float: left;
+	width: 100%;
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #777;
+	text-align: center;
+	padding: 10px 15px 0;
+	margin: 0;
+}
 .footer_logo ul {
 	float: left;
 	width: 100%;
@@ -1308,7 +1326,7 @@ p {
 }
 .footer_nav {
 	float: left;
-	width: 75%;
+	width: 70%;
 	display: flex;
 	align-items: flex-start;
 	gap: 30px;
