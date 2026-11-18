@@ -149,7 +149,7 @@ nav#cssmenu ul {
 	position: relative;
 }
 .logo img {
-	max-width: 160px;
+	max-width: 220px;
 }
 .logo a {
 	color: #6DDB07;
@@ -1265,7 +1265,7 @@ footer {
 }
 .footer_logo a.footer_logo-logo img {
 	text-align: center;
-	width: 160px;
+	width: 240px;
 }
 .footer_item {
 	float: left;
